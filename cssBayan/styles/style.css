@@ -1,0 +1,89 @@
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 50vw;
+  cursor: pointer;
+}
+
+.content-wrapper {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper:not(:hover) * p::after {
+  opacity: 0;
+}
+
+.item {
+  border-bottom: 0.15em solid grey;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+label>input {
+  display: none;
+}
+
+label:hover>img {
+  display: flex;
+
+}
+
+label:hover>p {
+  color: black;
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: blue;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+p::after {
+  content: url(../res/icons/expand_more_icon.svg);
+  transition: all .1s ease-in-out;
+}
+
+img {
+  display: none;
+  width: 40vmin;
+  margin: 0 auto 3% auto;
+  animation: sweep .5s forwards;
+  transform: scale(0);
+  cursor: pointer;
+}
+
+.item:hover>label>p::after {
+  content: url(../res/icons/close_icon.svg);
+}
+
+input[type="radio"]:checked~img {
+  display: flex;
+}
+
+input[type="radio"]:checked+p {
+  color: black;
+}
+
+input[type="radio"]:checked+p::after {
+  content: url(../res/icons/close_icon.svg);
+}
+
+@keyframes sweep {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
