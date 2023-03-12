@@ -6,6 +6,7 @@
 
 	.page-wrapper {
 		max-width: 80vw;
+		cursor:auto;
 	}
 
 	span {
