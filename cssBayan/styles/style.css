@@ -10,8 +10,12 @@
   flex-direction: column;
 }
 
-.page-wrapper:not(:hover) * span::after {
+.content-wrapper:not(:hover) * span::after {
   opacity: 0;
+}
+
+.content-wrapper:hover * span {
+  color: black;
 }
 
 .item {
@@ -33,9 +37,9 @@ label:hover>img {
 
 }
 
-label:hover>span {
+/* label:hover>span {
   color: black;
-}
+} */
 
 span {
   display: flex;
